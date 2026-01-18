@@ -1,6 +1,6 @@
 name: "Mysa2MQTT"
 slug: "mysa2mqtt"
-version: "0.1.0"
+version: "0.1.2"
 description: "Expose Mysa smart thermostats to MQTT for Home Assistant."
 url: "https://github.com/itsamenathan/mysa2mqtt-hass-addon"
 arch:
@@ -12,7 +12,7 @@ panel_title: "Mysa2MQTT"
 init: false
 map:
   - data:rw
-  - share:rw
+  - config:rw
 options:
   mqtt_host: "core-mosquitto"
   mqtt_port: 1883
@@ -25,7 +25,7 @@ options:
   log_level: "info"
   log_format: "pretty"
   temperature_unit: "C"
-  mysa_session_file: "/share/mysa2mqtt/session.json"
+  mysa_session_file: "/config/mysa2mqtt/session.json"
 schema:
   mqtt_host: str
   mqtt_port: int

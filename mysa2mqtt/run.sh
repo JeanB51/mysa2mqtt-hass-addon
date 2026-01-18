@@ -12,8 +12,6 @@ if ! bashio::config.has_value 'mysa_username' || ! bashio::config.has_value 'mys
   exit 1
 fi
 
-mkdir -p /data
-
 export M2M_MQTT_HOST="$(bashio::config 'mqtt_host')"
 export M2M_MQTT_PORT="$(bashio::config 'mqtt_port')"
 export M2M_MQTT_TOPIC_PREFIX="$(bashio::config 'mqtt_topic_prefix')"
